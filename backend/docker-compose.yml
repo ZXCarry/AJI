@@ -1,0 +1,14 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-sklep
+    environment:
+      MYSQL_ROOT_PASSWORD: hasloRoota
+      MYSQL_DATABASE: sklep
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_sklep_data:/var/lib/mysql
+
+volumes:
+  mysql_sklep_data:
